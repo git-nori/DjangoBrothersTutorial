@@ -5,7 +5,17 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>BlogSite</h1>
-    <p>TopPage</p>
+    <h1 style="text-align: center;">BlogSite</h1>
+    <div style="width: 70%; margin: 0px auto;">
+        <hr />
+        {% for blog in blogs %}
+        <div>
+            <h3>{{ blog.title }}</h3>
+            <!--truncatechars(テンプレートタグフィルター)を用いて100文字だけ表示するよう設定-->
+            <div>{{ blog.text | truncatechars:100 }}</div>
+        </div>
+        <hr />
+        {% endfor %}
+    </div>
 </body>
 </html>
