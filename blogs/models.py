@@ -12,4 +12,3 @@ class Blog(models.Model):
         """オブジェクトを扱う上で使用するフィールドを指定
             ブログオブジェクトの一覧ページ（http://127.0.0.1:8000/admin/blogs/blog/）にいくと、それぞれのブログのタイトルが表示される
         """
-        return self.title
